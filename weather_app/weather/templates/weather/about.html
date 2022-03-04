@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+	body {
+		background: lightgray !important;
+	}
+	/* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+	</style>
+	<title>О сайте</title>
+</head>
+
+<body>
+	<header class="d-flex justify-content-center p-3 bg-dark text-white">
+		<ul class="nav nav-pills">
+			<button class="btn"><a href="{% url 'home' %}" type="button">Главная</a></button>
+			<button class="btn"><a href="https://github.com/only1avetrill/BY-Weather-Website" type="button" target="_blank">Документация</a></button>
+		</ul>
+	</header>
+	<div class="container mt-5">
+		<h6 align="center">Текущая погода в областных центрах (и областях) Республики Беларусь. Для актуализации погодной информации обновите страницу.<br>В вечернее время возможны небольшие задержки при загрузке актуальных данных.<br><br>
+         Это тестовый сайт, разработанный с помощью Python, фреймворка Django, HTML и CSS (Bootstrap),
+         а также с использованием API сервиса OpenWeather.
+         Исходный код открыт и находится в свободном доступе на GitHub (раздел "Документация").<br><br>
+         Разработчик: <a href="https://vk.com/danyantsevich" type="button" target="_blank">Dan Yantsevich</a><br>
+         Связь: <a href="mailto:only1avetrill@gmail.com" type="button">only1avetrill@gmail.com</a>
+
+     </h6> </div>
+	<div class="container">
+		<footer class="py-2 my-4">
+			<ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
+			<p class="text-center text-muted">only1avetrill // Rocknox Interactive 2022</p>
+		</footer>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+	body {
+		background: lightgray !important;
+	}
+	/* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+	</style>
+	<title>Погода-BY</title>
+</head>
+
+<body>
+	<header class="d-flex justify-content-center p-3 bg-dark text-white">
+		<ul class="nav nav-pills">
+			<button class="btn"><a href="{% url 'about' %}" type="button">О сайте</a></button>
+			<button class="btn"><a href="https://github.com/only1avetrill/BY-Weather-Website" type="button" target="_blank">Документация</a></button>
+		</ul>
+	</header>
+	<div class="container mt-5">
+		<div class="col-5 offset-1"> {% for info in all_info %}
+			<div class="alert alert-success">
+				<div class="row">
+					<div class="col-8"> <b> {{info.city}} <br></b> Температура: {{info.temp}} <sup>o</sup>C
+						<br> Давление: {{info.press}} мм. рт. ст.
+						<br> Влажность: {{info.hum}}%
+						<br> Скорость ветра: {{info.wind}} м/с
+						<br> </div>
+					<div class="col-2 offset-1"> <img src="http://openweathermap.org/img/w/{{info.icon}}.png" alt="weather_ico"> </div>
+				</div>
+			</div> {% endfor %} </div>
+	</div>
+	</div>
+	<div class="container">
+		<footer class="py-2 my-4">
+			<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+				<li class="nav-item"><a href="./admin" class="nav-link px-2 text-muted">Панель управления</a></li>
+			</ul>
+			<p class="text-center text-muted">only1avetrill // Rocknox Interactive 2022</p>
+		</footer>
+	</div>
+</body>
+
+</html>
